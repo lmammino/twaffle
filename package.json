@@ -1,14 +1,17 @@
 {
-  "name": "twitter-raffle",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "twaffle",
+  "version": "0.0.1",
+  "description": "A TWitter rAFFLE script",
+  "main": "lib.js",
   "bin": {
     "twaffle": "index.js"
   },
   "scripts": {
     "lint": "eslint index.js",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "package:create": "pkg . -t node8-win,node8-macos,node8-linux --out-dir build",
+    "package:publish": "node scripts/publish-release $GITHUB_TOKEN lmammino/godaddy-dns $npm_package_version",
+    "release:tag": "git tag $npm_package_version && git push --tags"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +28,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "pkg": "^4.3.4"
   }
 }
