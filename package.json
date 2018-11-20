@@ -1,6 +1,6 @@
 {
   "name": "twaffle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A TWitter rAFFLE script",
   "main": "lib.js",
   "bin": {
@@ -10,7 +10,7 @@
     "lint": "eslint index.js",
     "test": "npm run lint",
     "package:create": "pkg . -t node8-win,node8-macos,node8-linux --out-dir build",
-    "package:publish": "node scripts/publish-release $GITHUB_TOKEN lmammino/godaddy-dns $npm_package_version",
+    "package:publish": "node scripts/publish-release $GITHUB_TOKEN lmammino/twaffle $npm_package_version",
     "release:tag": "git tag $npm_package_version && git push --tags"
   },
   "keywords": [],
